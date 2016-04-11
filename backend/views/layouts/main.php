@@ -36,6 +36,8 @@ AppAsset::register($this);
                 ['label' => 'Sukarelawan', 'url' => ['/kds-sukarelawan/index']],
                 ['label' => 'Isu', 'url' => ['/kds-isu/index']],
                 ['label' => 'Profil', 'url' => ['/kds-profil/index']],
+                ['label' => 'Bimbing', 'url' => ['/bimbing']],
+                ['label' => 'Jcfm', 'url' => ['/jcfm']],
 
             ];
             if (Yii::$app->user->isGuest) {
