@@ -157,5 +157,13 @@ $(function(){
 
     }
 
+$('#perakuan').click(function(){
+    if($(this).is(':checked')){
+       $('#able').removeAttr("disabled");
+    }else {
+        
+         $('#able').attr("disabled", "true");
+    }
 
+    });
 });
