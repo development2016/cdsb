@@ -18,6 +18,7 @@ KDS System - Yii2 Advanced Project Template
 		* Kawasan Perlaksanaan
 		* Aktiviti
 		* Program
+		* Organisasi
 		* Crowd Founding
 		* Local Champion
 		* CSR
@@ -29,11 +30,15 @@ KDS System - Yii2 Advanced Project Template
 		* Smart TV
 		* Galeri
 		* KDMA
+
 2. Common
+
 	* Config (Local Server)
 		* 192.168.0.20 - MySQL
 		* 192.168.0.115 - MongoDB
+
 	* Models
 		* Lookup_*
 		* User
+
 3. Frontend
