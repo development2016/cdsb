@@ -6,7 +6,7 @@ CDSB System - Yii2 Advanced Project Template
 
 ## System structure
 
-* Backend
+1. Backend
 	* Modules
 		* JCFM
 			* MVC
@@ -37,11 +37,11 @@ CDSB System - Yii2 Advanced Project Template
 			* MVC
 		* Kawasan Perlaksanaan
 			* MVC
-* Common
+2 Common
 	* Config
 		* 192.168.0.20 - MySQL
 		* 192.168.0.115 - MongoDB
 	* Models
 		* Lookup_*
 		* User
-* Frontend
+3 Frontend
