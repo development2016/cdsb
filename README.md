@@ -1,4 +1,4 @@
-CDSB System - Yii2 Advanced Project Template
+KDS System - Yii2 Advanced Project Template
 =======================================
 
 
@@ -7,13 +7,6 @@ CDSB System - Yii2 Advanced Project Template
 ## System structure
 
 1. Backend
-	* Modules (MVC)
-		* JCFM
-		* BIMBING
-		* Laporan
-		* Smart TV
-		* Galeri
-		* KDMA
 	* Modul (MVC)
 		* Profil
 		* Sukarelawan
@@ -23,8 +16,21 @@ CDSB System - Yii2 Advanced Project Template
 		* Microworker
 		* Isu Konduit
 		* Kawasan Perlaksanaan
+		* Aktiviti
+		* Program
+		* Crowd Founding
+		* Local Champion
+		* CSR
+
+	* Sub Modules (MVC)
+		* JCFM
+		* BIMBING
+		* Laporan
+		* Smart TV
+		* Galeri
+		* KDMA
 2. Common
-	* Config
+	* Config (Local Server)
 		* 192.168.0.20 - MySQL
 		* 192.168.0.115 - MongoDB
 	* Models

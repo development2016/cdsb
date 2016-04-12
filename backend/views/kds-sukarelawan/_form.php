@@ -208,24 +208,15 @@ $kawasan_perlaksanaan = json_decode($kawasan_perlaksanaan);
     <?= $form->field($model, 'sumbangan_yang_boleh_diberikan[tenega]')->dropDownList(['Ya' => 'Ya', 'Tidak' => 'Tidak'],['prompt'=>'--Sila Pilih--'])->label('Tenaga') ?>
 
     <?= $form->field($model, 'sumbangan_yang_boleh_diberikan[lain_lain]')->label('Lain - lain') ?>
-    <div class='row'>
-        <div class='col-sm-4'>
-            <input type='checkbox' id='perakuan' />
-        </div>
-        <div class='col-sm-12'>
-            <p>Saya mengaku bahawa semua maklumat yang diberikan dalam dokumen ini adalah betul dan benar mengikut pengetahuan saya.Saya faham bahawa sebarang kenyataan 
-            yang palsu boleh menyebabkan data dan profil peribadi saya di dalam sistem ditolak untuk pengesahan.</p>
-        </div>
-        
-    </div>
+
 
 
     <div class="form-group">
-        <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary','id'=>'able','disabled'=>'disabled']) ?>
+        <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary','id'=>'btn-sukarelawan','disabled'=>'disabled']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>
 
 </div>
-<script>
+
 
