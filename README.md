@@ -37,11 +37,11 @@ CDSB System - Yii2 Advanced Project Template
 			* MVC
 		* Kawasan Perlaksanaan
 			* MVC
-2 Common
+2. Common
 	* Config
 		* 192.168.0.20 - MySQL
 		* 192.168.0.115 - MongoDB
 	* Models
 		* Lookup_*
 		* User
-3 Frontend
+3. Frontend
