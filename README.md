@@ -1,5 +1,7 @@
-CDSB System - JCFM & BIMBING Using Advanced Project Template
+CDSB System - Advanced Project Template
 =============================================================
+
+## Developers
 
 - Fuad
 - Shahril
