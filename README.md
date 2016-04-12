@@ -2,7 +2,7 @@ KDS System - Yii2 Advanced Project Template
 =======================================
 
 
-![Image of KDS](kds.png)
+![Image of KDS](kds_structure.png)
 
 ## System structure
 
