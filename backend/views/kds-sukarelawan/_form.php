@@ -14,6 +14,7 @@ use common\models\LookupKampung;
 use dosamigos\datepicker\DatePicker;
 use dosamigos\datetimepicker\DateTimePicker;
 
+
 /* @var $this yii\web\View */
 /* @var $model backend\models\KdsSukarelawan */
 
@@ -66,8 +67,6 @@ $kawasan_perlaksanaan = json_decode($kawasan_perlaksanaan);
 
     </div>
 <?php } ?>
-
-
 
 <div class="kds-sukarelawan-form">
 
@@ -209,6 +208,13 @@ $kawasan_perlaksanaan = json_decode($kawasan_perlaksanaan);
 
     <?= $form->field($model, 'sumbangan_yang_boleh_diberikan[lain_lain]')->label('Lain - lain') ?>
 
+    <div class="form-group field-kdssukarelawan-confirmation required">
+    
+    <?=Html::input('checkbox','confirmation-sukarelawan',null,['class'=>'confirmation-sukarelawan','id'=>'confirmation-sukarelawan']) ?>
+    <label class="control-label" for="kdssukarelawan-confirmation">Adakah Anda Pasti Maklumat Yang Anda Isi Adalah Benar !</label>
+
+    <div class="help-block"></div>
+    </div>
 
 
     <div class="form-group">

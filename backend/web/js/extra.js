@@ -157,5 +157,17 @@ $(function(){
 
     }
 
+    $('#confirmation-sukarelawan').click(function(){
+        if($(this).is(':checked')){
+           $('#btn-sukarelawan').removeAttr("disabled");
+        }else {
+            
+             $('#btn-sukarelawan').attr("disabled", "true");
+        }
+
+    });
+
+
+
 });
 
