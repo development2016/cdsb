@@ -10,7 +10,7 @@ return [
         ],
         'mongodb' => [
             'class' => '\yii\mongodb\Connection',
-            'dsn' => 'mongodb://pokok:pokok@localhost:27017/cdsb',
+            'dsn' => 'mongodb://pokok:pokok@192.168.0.115:27017/cdsb',
         ],
         'mailer' => [
             'class' => 'yii\swiftmailer\Mailer',
