@@ -3,6 +3,7 @@ KDS System - Yii2 Advanced Project Template
 
 
 ![Image of KDS](kds_structure.png)
+![Image of FLOW](flow.png)
 
 ## System Timeline
 
