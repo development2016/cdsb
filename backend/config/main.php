@@ -17,6 +17,9 @@ return [
         ],
         'bimbing' => [
             'class' => 'backend\modules\bimbing\Bimbing',
+        ],
+        'gallery' => [
+            'class' => 'backend\modules\gallery\Gallery',
         ]
     ],
     'components' => [

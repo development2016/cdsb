@@ -2,7 +2,7 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
-
+use dosamigos\fileupload\FileUploadUI;
 /* @var $this yii\web\View */
 /* @var $model backend\modules\gallery\models\GalleryImage */
 /* @var $form yii\widgets\ActiveForm */
@@ -30,6 +30,7 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'update_by')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'program')->textInput(['maxlength' => true]) ?>
+    
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
@@ -38,3 +39,27 @@ use yii\widgets\ActiveForm;
     <?php ActiveForm::end(); ?>
 
 </div>
+<?= FileUploadUI::widget([
+    'model' => $model,
+    'attribute' => 'image',
+    'url' => ['gallery-image/upload'],
+    'gallery' => false,
+    'fieldOptions' => [
+            'accept' => 'image/*'
+    ],
+    'clientOptions' => [
+            'maxFileSize' => 2000000
+    ],
+    // ...
+    'clientEvents' => [
+            'fileuploaddone' => 'function(e, data) {
+                                    console.log(e);
+                                    console.log(data);
+                                }',
+            'fileuploadfail' => 'function(e, data) {
+                                    console.log(e);
+                                    console.log(data);
+                                }',
+    ],
+]);
+?>
