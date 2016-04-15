@@ -2,7 +2,7 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
-use dosamigos\fileupload\FileUploadUI;
+
 /* @var $this yii\web\View */
 /* @var $model backend\modules\gallery\models\GalleryImage */
 /* @var $form yii\widgets\ActiveForm */
@@ -15,11 +15,23 @@ use dosamigos\fileupload\FileUploadUI;
 
     <?= $form->field($model, 'state_id')->textInput() ?>
 
-    <?= $form->field($model, 'file')->fileInput() ?>
 
-    <?= $form->field($model, 'caption1')->textInput(['maxlength' => true]) ?>
+    <table border="1">
+        <tr>
+            <td>
+                <?= $form->field($model, 'file')->fileInput() ?>
 
-    <?= $form->field($model, 'caption2')->textInput(['maxlength' => true]) ?>
+                <?= $form->field($model, 'caption1')->textInput(['maxlength' => true]) ?>
+
+                <?= $form->field($model, 'caption2')->textInput(['maxlength' => true]) ?>
+
+            </td>
+            <td> <div id="image-holder"></div></td>
+        </tr>
+    </table>
+
+
+    
 
     <?= $form->field($model, 'date_enter')->textInput(['maxlength' => true]) ?>
 
@@ -39,27 +51,3 @@ use dosamigos\fileupload\FileUploadUI;
     <?php ActiveForm::end(); ?>
 
 </div>
-<?= FileUploadUI::widget([
-    'model' => $model,
-    'attribute' => 'image',
-    'url' => ['gallery-image/upload'],
-    'gallery' => false,
-    'fieldOptions' => [
-            'accept' => 'image/*'
-    ],
-    'clientOptions' => [
-            'maxFileSize' => 2000000
-    ],
-    // ...
-    'clientEvents' => [
-            'fileuploaddone' => 'function(e, data) {
-                                    console.log(e);
-                                    console.log(data);
-                                }',
-            'fileuploadfail' => 'function(e, data) {
-                                    console.log(e);
-                                    console.log(data);
-                                }',
-    ],
-]);
-?>

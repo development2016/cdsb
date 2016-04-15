@@ -131,52 +131,52 @@ class GalleryImageController extends Controller
             throw new NotFoundHttpException('The requested page does not exist.');
         }
     }
-    public function actionUpload()
-{
-    $imageFile = UploadedFile::getInstanceByName('GalleryImage[image]');
-    $directory = \Yii::getAlias('uploads/') . DIRECTORY_SEPARATOR . Yii::$app->session->id . DIRECTORY_SEPARATOR;
-    if (!is_dir($directory)) {
-        mkdir($directory);
-    }
-    if ($imageFile) {
-        $uid = uniqid(time(), true);
-        $fileName = $uid . '.' . $imageFile->extension;
-        $filePath = $directory . $fileName;
-        if ($imageFile->saveAs($filePath)) {
-            $path = 'uploads/' . Yii::$app->session->id . DIRECTORY_SEPARATOR . $fileName;
-           return Json::encode([
-                'files' => [[
-                    'name' => $fileName,
-                    'size' => $imageFile->size,
-                    "url" => $path,
-                    "thumbnailUrl" => $path,
-                    "deleteUrl" => 'padam?name=' . $fileName, 
-                    "deleteType" => "POST"
-                ]]
-            ]);
+    /*public function actionUpload()
+    {
+        $imageFile = UploadedFile::getInstanceByName('GalleryImage[image]');
+        $directory = \Yii::getAlias('uploads/') . DIRECTORY_SEPARATOR . Yii::$app->session->id . DIRECTORY_SEPARATOR;
+        if (!is_dir($directory)) {
+            mkdir($directory);
         }
+        if ($imageFile) {
+            $uid = uniqid(time(), true);
+            $fileName = $uid . '.' . $imageFile->extension;
+            $filePath = $directory . $fileName;
+            if ($imageFile->saveAs($filePath)) {
+                $path = 'uploads/' . Yii::$app->session->id . DIRECTORY_SEPARATOR . $fileName;
+               return Json::encode([
+                    'files' => [[
+                        'name' => $fileName,
+                        'size' => $imageFile->size,
+                        "url" => $path,
+                        "thumbnailUrl" => $path,
+                        "deleteUrl" => 'padam?name=' . $fileName, 
+                        "deleteType" => "POST"
+                    ]]
+                ]);
+            }
+        }
+        return '';
     }
-    return '';
-}
-public function actionPadam($name)
-{
-    $directory = \Yii::getAlias('uploads/') . DIRECTORY_SEPARATOR . Yii::$app->session->id;
-    if (is_file($directory . DIRECTORY_SEPARATOR . $name)) {
-        unlink($directory . DIRECTORY_SEPARATOR . $name);
-    }
-    $files = FileHelper::findFiles($directory);
-    $output = [];
-    foreach ($files as $file){
-        $path = 'uploads/' . Yii::$app->session->id . DIRECTORY_SEPARATOR . basename($file);
-        $output['files'][] = [
-            'name' => basename($file),
-            'size' => filesize($file),
-            "url" => $path,
-            "thumbnailUrl" => $path,
-            "deleteUrl" => 'uploads/' . basename($file),
-            "deleteType" => "POST"
-        ];
-    }
-    return Json::encode($output);
-}
+    public function actionPadam($name)
+    {
+        $directory = \Yii::getAlias('uploads/') . DIRECTORY_SEPARATOR . Yii::$app->session->id;
+        if (is_file($directory . DIRECTORY_SEPARATOR . $name)) {
+            unlink($directory . DIRECTORY_SEPARATOR . $name);
+        }
+        $files = FileHelper::findFiles($directory);
+        $output = [];
+        foreach ($files as $file){
+            $path = 'uploads/' . Yii::$app->session->id . DIRECTORY_SEPARATOR . basename($file);
+            $output['files'][] = [
+                'name' => basename($file),
+                'size' => filesize($file),
+                "url" => $path,
+                "thumbnailUrl" => $path,
+                "deleteUrl" => 'uploads/' . basename($file),
+                "deleteType" => "POST"
+            ];
+        }
+        return Json::encode($output);
+    } */
 }
