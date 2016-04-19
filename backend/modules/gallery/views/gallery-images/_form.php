@@ -30,7 +30,7 @@ $this->registerJs($js);
 
 <div class="gallery-images-form">
 
-    <?php $form = ActiveForm::begin(['id' => 'dynamic-form']); ?>
+    <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data','id'=>'dynamic-form']]) ?>
 
     <?= $form->field($model, 'state_id') ?>
 

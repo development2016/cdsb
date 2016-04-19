@@ -27,7 +27,6 @@ $this->params['breadcrumbs'][] = $this->title;
 
             '_id',
             'state_id',
-
             'program',
             'description',
             // 'date_enter',

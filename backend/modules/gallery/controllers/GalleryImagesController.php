@@ -63,7 +63,12 @@ class GalleryImagesController extends Controller
         $model = new GalleryImages();
         $models = [new GalleryImages];
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($model->load(Yii::$app->request->post()) ) {
+
+            print_r($_POST);
+            exit();
+
+            $model->save();
             return $this->redirect(['view', 'id' => (string)$model->_id]);
         } else {
             return $this->render('create', [
