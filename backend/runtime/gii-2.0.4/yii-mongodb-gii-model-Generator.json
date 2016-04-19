@@ -1,1 +1,1 @@
-{"template":"default","enableI18N":"0","messageCategory":"app","ns":"backend\\modules\\bimbing\\models","db":"mongodb","baseClass":"yii\\mongodb\\ActiveRecord"}
+{"template":"default","enableI18N":"0","messageCategory":"app","ns":"backend\\modules\\gallery\\models","db":"mongodb","baseClass":"yii\\mongodb\\ActiveRecord"}

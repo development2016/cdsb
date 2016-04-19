@@ -22,6 +22,9 @@ class AppAsset extends AssetBundle
     ];
     public $js = [
         'js/extra.js',
+        'js/jquery.form.js',
+        'js/jquery.MetaData.js',
+        'js/jquery.MultiFile.js'
     ];
     public $depends = [
         'yii\web\YiiAsset',
