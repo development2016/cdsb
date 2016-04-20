@@ -32,7 +32,7 @@ class GalleryImages extends \yii\db\ActiveRecord
         return [
             [['size','gallery_info_id'], 'integer'],
             [['path', 'caption_1', 'caption_2'], 'string', 'max' => 225],
-            [['type'], 'string', 'max' => 50]
+            [['type','tarikh_gambar'], 'string', 'max' => 50]
         ];
     }
 
@@ -48,7 +48,8 @@ class GalleryImages extends \yii\db\ActiveRecord
             'type' => 'Type',
             'caption_1' => 'Caption 1',
             'caption_2' => 'Caption 2',
-            'gallery_info_id' => 'gallery_info_id'
+            'gallery_info_id' => 'gallery_info_id',
+            'tarikh_gambar' => 'tarikh_gambar'
         ];
     }
 }

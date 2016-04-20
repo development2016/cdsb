@@ -20,7 +20,16 @@ return [
         ],
         'gallery' => [
             'class' => 'backend\modules\gallery\Gallery',
-        ]
+        ],
+        'reporting' => [
+            'class' => 'backend\modules\reporting\Report',
+        ],
+    
+
+
+
+
+
     ],
     'components' => [
         'user' => [

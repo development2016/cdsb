@@ -50,8 +50,10 @@ class GalleryInfoController extends Controller
      */
     public function actionView($id)
     {
+        $models = GalleryImages::find()->where(['gallery_info_id'=>$id])->all();
         return $this->render('view', [
             'model' => $this->findModel($id),
+            'models' => $models,
         ]);
     }
 

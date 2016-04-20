@@ -5,6 +5,7 @@ use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use yii\bootstrap\Modal;
+use yii\widgets\Menu;
 /* @var $this \yii\web\View */
 /* @var $content string */
 
@@ -23,6 +24,7 @@ AppAsset::register($this);
 <body>
     <?php $this->beginBody() ?>
     <div class="wrap">
+
         <?php
             NavBar::begin([
                 'brandLabel' => 'My Company',
@@ -36,8 +38,16 @@ AppAsset::register($this);
                 ['label' => 'Sukarelawan', 'url' => ['/kds-sukarelawan/index']],
                 ['label' => 'Isu', 'url' => ['/kds-isu/index']],
                 ['label' => 'Profil', 'url' => ['/kds-profil/index']],
-                ['label' => 'Bimbing', 'url' => ['/bimbing']],
-                ['label' => 'Jcfm', 'url' => ['/jcfm']],
+                ['label' => 'Modules',
+                    'url' => ['#'],
+                    'items' => [
+                        ['label' => 'Bimbing', 'url'=>['/bimbing']],
+                        ['label' => 'JCFM', 'url'=>['/jcfm']],
+                        ['label' => 'Gallery', 'url'=>['/gallery']],
+
+                    ]
+
+                ]
 
             ];
             if (Yii::$app->user->isGuest) {
