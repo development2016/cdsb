@@ -112,6 +112,7 @@ class GalleryInfoController extends Controller
 
     public function actionUpdate($id)
     {
+        $this->layout = 'gallery';
         $models = GalleryImages::find()->where(['gallery_info_id'=>$id])->all();
         return $this->render('update', [
             'models' => $models,
