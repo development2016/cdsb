@@ -38,24 +38,21 @@ $this->params['breadcrumbs'][] = $this->title;
         ],
     ]) ?>
 
-<table class="table table-striped table-bordered detail-view">
-    <tbody>
-        <tr>
-            <th>Gambar</th>
-            <th>Caption 1</th>
-            <th>Caption 2</th>
-        </tr>
-        <?php foreach ($models as $key => $value) { ?>
-        <tr>
-            <td><?= Html::img($value['path'],['class'=>'imgshow']);?></td>
-            <td><?php echo $value['caption_1'] ?></td>
-            <td><?php echo $value['caption_2'] ?></td>
-        </tr>
 
+
+
+        <?php foreach ($models as $key => $value) { ?>
+
+        <div class="image">
+
+              <?= Html::img($value['path'],['class'=>'imgshow']);?>
+
+              <p class="caption_1"><?php echo $value['caption_1'] ?></p>
+              <p class="caption_2"><?php echo $value['caption_2'] ?></p>
+
+        </div>
         <?php } ?>
 
-    </tbody>
-</table>
 
 
 </div>

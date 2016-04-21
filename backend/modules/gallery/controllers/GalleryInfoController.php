@@ -109,7 +109,20 @@ class GalleryInfoController extends Controller
      * @param integer $id
      * @return mixed
      */
+
     public function actionUpdate($id)
+    {
+        $models = GalleryImages::find()->where(['gallery_info_id'=>$id])->all();
+        return $this->render('update', [
+            'models' => $models,
+        ]);
+    }
+
+
+
+
+
+    /*public function actionUpdate($id)
     {
         $model = $this->findModel($id);
 
@@ -120,7 +133,7 @@ class GalleryInfoController extends Controller
                 'model' => $model,
             ]);
         }
-    }
+    } */
 
     /**
      * Deletes an existing GalleryInfo model.

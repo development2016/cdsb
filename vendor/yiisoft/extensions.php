@@ -138,4 +138,13 @@ return array (
       '@kartik/file' => $vendorDir . '/kartik-v/yii2-widget-fileinput',
     ),
   ),
+  'metalguardian/yii2-fotorama-widget' => 
+  array (
+    'name' => 'metalguardian/yii2-fotorama-widget',
+    'version' => '1.0.0.0',
+    'alias' => 
+    array (
+      '@metalguardian/fotorama' => $vendorDir . '/metalguardian/yii2-fotorama-widget/src',
+    ),
+  ),
 );
