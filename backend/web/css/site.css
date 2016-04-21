@@ -116,37 +116,12 @@ a.desc:after {
 .caption_2  { 
     right: 50px;
     position: absolute; 
-    top: 400px; 
+    top: 500px; 
     color: #fff; 
     font-size: 24px; 
     background: rgb(0, 0, 0); 
     background: rgba(220,0,0,0.6); 
     padding: 10px;
-
-}
-
-
-
-
-#slider {
-  position: relative;
-  overflow: hidden;
-  margin: 20px auto 0 auto;
-  border-radius: 4px solid #000;
-}
-
-#slider ul {
-  position: relative;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-#slider ul li {
-  position: relative;
-  float: left;
-  width: 900px;
-  height: auto;
 
 }
 

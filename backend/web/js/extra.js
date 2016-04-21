@@ -168,6 +168,9 @@ $(function(){
     });
 
 
+
+
+/*
     setInterval(function () {
           moveRight();
     }, 5000);
@@ -190,7 +193,7 @@ $(function(){
               $('#slider ul li:first-child').appendTo('#slider ul');
               $('#slider ul').css('left', '');
           });
-    };
+    }; */
 
 
       
