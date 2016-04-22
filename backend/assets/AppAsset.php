@@ -19,7 +19,8 @@ class AppAsset extends AssetBundle
     public $baseUrl = '@web';
     public $css = [
         'css/site.css',
-        'slide/css/jquery.carousel.fullscreen.css',
+        'slid/css/bootstrap.min.css',
+        'slid/css/full-slider.css',
 
     ];
     public $js = [
@@ -27,8 +28,7 @@ class AppAsset extends AssetBundle
         'js/jquery.form.js',
         'js/jquery.MetaData.js',
         'js/jquery.MultiFile.js',
-        'slide/js/bootstrap/js/bootstrap.min.js',
-
+        'slid/js/bootstrap.min.js',
 
     ];
     public $depends = [

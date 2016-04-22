@@ -167,6 +167,9 @@ $(function(){
 
     });
 
+
+ 
+
     var $item = $('.carousel .item'); 
     var $wHeight = $(window).height();
     $item.eq(0).addClass('active');
@@ -191,7 +194,7 @@ $(function(){
     $('.carousel').carousel({
       interval: 6000,
       pause: "false"
-    });
+    }); 
 
     
 

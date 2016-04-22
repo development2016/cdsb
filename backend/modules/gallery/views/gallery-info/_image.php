@@ -1,28 +1,25 @@
 <?php
 use yii\helpers\Html;
 ?>
-<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-  <!-- Indicators -->
 
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner">
+    <!-- Full Page Image Background Carousel Header -->
+    <div id="carousel" class="carousel slide">
 
-    <?php foreach ($models as $key => $value) { ?>
-      <div class="item">
-        <img src="<?php echo $value['path']; ?>" alt="" />
-        <div class="container">
-          <div class="carousel-caption">
-            <h1><?php echo $value['caption_1']; ?></h1>
-            <p class="lead"><?php echo $value['caption_2']; ?></p>
-          </div>
+        <!-- Wrapper for Slides -->
+        <div class="carousel-inner">
+          <?php foreach ($models as $key => $value) { ?>
+            <div class="item">
+                <!-- Set the first background image using inline CSS below. -->
+                <div class="fill" style="background-image:url('<?php echo $value['path']; ?>');"></div>
+                <div class="carousel-caption">
+                  <h1><?php echo $value['caption_1']; ?></h1>
+                  <p class="lead"><?php echo $value['caption_2']; ?></p>
+                </div>
+            </div>
+          <?php } ?>
+
         </div>
-      </div>
-    
-    <?php } ?>
 
+   
 
-
-  </div>
-
-
-</div>
+    </div>
