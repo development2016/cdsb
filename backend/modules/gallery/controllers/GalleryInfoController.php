@@ -80,7 +80,7 @@ class GalleryInfoController extends Controller
                     $models = new GalleryImages();
                     $file = UploadedFile::getInstanceByName('GalleryImages[path]['.$i.'][path]');
                     $models->path = 'uploads/'.$file->name;
-                    $file->saveAs('uploads/' . $file->name . '.' . $file->extension);
+                    $file->saveAs('uploads/' . $file->name);
                     $models->size  = $file->size;
                     $models->type  = $file->type;
                     $models->caption_1 = $_POST['GalleryImages']['path'][$i]['caption_1'];
@@ -110,31 +110,30 @@ class GalleryInfoController extends Controller
      * @return mixed
      */
 
-    public function actionUpdate($id)
+    public function actionGallery($id)
     {
         $this->layout = 'gallery';
         $models = GalleryImages::find()->where(['gallery_info_id'=>$id])->all();
-        return $this->render('update', [
+        return $this->render('gallery', [
             'models' => $models,
         ]);
     }
 
 
 
-
-
-    /*public function actionUpdate($id)
+    public function actionUpdate($id)
     {
         $model = $this->findModel($id);
-
+        $models = GalleryImages::find()->where(['gallery_info_id'=>$id])->all();
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('update', [
                 'model' => $model,
+                'models' => (empty($models)) ? [new GalleryImages] : $models,
             ]);
         }
-    } */
+    }
 
     /**
      * Deletes an existing GalleryInfo model.

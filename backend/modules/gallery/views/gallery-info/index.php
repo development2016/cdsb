@@ -33,7 +33,59 @@ $this->params['breadcrumbs'][] = $this->title;
             // 'date_update',
             // 'update_by',
 
-            ['class' => 'yii\grid\ActionColumn'],
+            //['class' => 'yii\grid\ActionColumn'],
+
+            [
+                'header' => 'Tindakan',
+                'class' => 'yii\grid\ActionColumn',
+                'template'=>'{galeri}  |  {lihat}  |  {kemaskini}  |  {buang}',
+                    'buttons' => [
+                        'galeri' => function ($url, $model) {
+                            return Html::a('Galeri', 
+                                    $url,['title'=> Yii::t('app','Galeri')]);
+
+                        },
+                        'lihat' => function ($url, $model) {
+                            return Html::a('Lihat', 
+                                    $url,['title'=> Yii::t('app','Lihat')]);
+
+                        },
+                        'kemaskini' => function ($url, $model) {
+                            return Html::a('Edit', $url, [
+                                        'title' => Yii::t('app', 'Kemaskini'),
+                            ]);
+                        },
+
+                        'buang' => function ($url, $model) {
+                            return Html::a('Buang', $url, [
+                                        'title' => Yii::t('app', 'Buang'),
+                            ]);
+
+                        },
+
+                    ],
+                    'urlCreator' => function ($action, $model, $key, $index) {
+                        if ($action === 'galeri') {
+                            $url = ['gallery-info/gallery','id'=>$model->id];
+                            return $url;
+                        }
+                        if ($action === 'lihat') {
+                            $url = ['gallery-info/view','id'=>$model->id];
+                            return $url;
+                        }
+                        if ($action === 'kemaskini') {
+                            $url = ['gallery-info/update','id'=>$model->id];
+                            return $url;
+                        }
+                        if ($action === 'buang') {
+                            $url = ['gallery-info/delete','id'=>$model->id];
+                            return $url;
+                        }
+                    }
+                ],
+
+
+
         ],
     ]); ?>
 
