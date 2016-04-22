@@ -94,37 +94,20 @@ a.desc:after {
     display: none;
 }
 .imgshow {
-    width: 100%;
+    width: 300px;
     height: auto;
 }
 
 
-.image { position: relative; margin-bottom: 20px; }
-.caption_1  { 
-    margin-left: 50px;
-    position: absolute; 
-    top: 150px; 
-    left: 0; 
-    color: #fff; 
-    font-size: 24px; 
-    background: rgb(0, 0, 0); 
-    background: rgba(220,0,0,0.6); 
+.caption-wall {
+    display: inline-block;
+    
     padding: 10px;
-
+    background: rgba(130, 128, 128, 0.64);
+    border-radius: 15px 15px 15px 15px;
+    opacity: 0.9;
 
 }
-.caption_2  { 
-    right: 50px;
-    position: absolute; 
-    top: 500px; 
-    color: #fff; 
-    font-size: 24px; 
-    background: rgb(0, 0, 0); 
-    background: rgba(220,0,0,0.6); 
-    padding: 10px;
-
-}
-
 
 
 

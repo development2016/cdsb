@@ -31,6 +31,7 @@ AppAsset::register($this);
 <?php $this->endBody() ?>
 </body>
 </html>
-
+<script src="<?php echo Yii::$app->request->baseUrl; ?>/slid/js/bootstrap.min.js"></script>
+</body>
 <?php $this->endPage() ?>
 

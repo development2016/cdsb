@@ -28,7 +28,6 @@ class AppAsset extends AssetBundle
         'js/jquery.form.js',
         'js/jquery.MetaData.js',
         'js/jquery.MultiFile.js',
-        'slid/js/bootstrap.min.js',
 
     ];
     public $depends = [
