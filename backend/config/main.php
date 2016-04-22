@@ -24,11 +24,6 @@ return [
         'reporting' => [
             'class' => 'backend\modules\reporting\Report',
         ],
-    
-
-
-
-
 
     ],
     'components' => [
