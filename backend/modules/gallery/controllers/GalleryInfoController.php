@@ -79,8 +79,9 @@ class GalleryInfoController extends Controller
 
                     $models = new GalleryImages();
                     $file = UploadedFile::getInstanceByName('GalleryImages[path]['.$i.'][path]');
-                    $models->path = 'uploads/'.$file->name;
-                    $file->saveAs('uploads/' . $file->name);
+                    $models->path = 'images/'.$file->name;
+                    //$file->saveAs('uploads/' . $file->name);
+                    $file->saveAs( Yii::getAlias('@root') .'/images/' . $file->name);
                     $models->size  = $file->size;
                     $models->type  = $file->type;
                     $models->caption_1 = $_POST['GalleryImages']['path'][$i]['caption_1'];

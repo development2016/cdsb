@@ -48,6 +48,15 @@ AppAsset::register($this);
 
                     ]
 
+                ],
+                ['label' => 'Sub',
+                    'url' => ['#'],
+                    'items' => [
+                        ['label' => 'Program', 'url'=>['/kds-program']],
+
+
+                    ]
+
                 ]
 
             ];

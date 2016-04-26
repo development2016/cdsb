@@ -47,7 +47,7 @@ $this->params['breadcrumbs'][] = $this->title;
         </tr>
         <?php foreach ($models as $key => $value) { ?>
         <tr>
-            <td><?= Html::img($value['path'],['class'=>'imgshow']);?></td>
+            <td><?= Html::img('../../'.$value['path'],['class'=>'imgshow']);?></td>
             <td><?php echo $value['caption_1'] ?></td>
             <td><?php echo $value['caption_2'] ?></td>
         </tr>

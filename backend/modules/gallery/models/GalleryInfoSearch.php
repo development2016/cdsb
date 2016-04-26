@@ -18,8 +18,8 @@ class GalleryInfoSearch extends GalleryInfo
     public function rules()
     {
         return [
-            [['id', 'state_id', 'program_id', 'enter_by', 'update_by'], 'integer'],
-            [['date_enter', 'date_update'], 'safe'],
+            [['id', 'state_id', 'enter_by', 'update_by'], 'integer'],
+            [['date_enter', 'program_id','date_update'], 'safe'],
         ];
     }
 
@@ -58,12 +58,12 @@ class GalleryInfoSearch extends GalleryInfo
         $query->andFilterWhere([
             'id' => $this->id,
             'state_id' => $this->state_id,
-            'program_id' => $this->program_id,
             'enter_by' => $this->enter_by,
             'update_by' => $this->update_by,
         ]);
 
         $query->andFilterWhere(['like', 'date_enter', $this->date_enter])
+            ->andFilterWhere(['like', 'program_id', $this->program_id])
             ->andFilterWhere(['like', 'date_update', $this->date_update]);
 
         return $dataProvider;

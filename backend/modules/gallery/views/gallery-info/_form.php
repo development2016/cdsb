@@ -6,6 +6,7 @@ use yii\helpers\Url;
 use yii\helpers\ArrayHelper;
 use wbraganca\dynamicform\DynamicFormWidget;
 use common\models\LookupState;
+use backend\models\KdsProgram;
 /* @var $this yii\web\View */
 /* @var $model backend\modules\gallery\models\GalleryInfo */
 /* @var $form yii\widgets\ActiveForm */
@@ -28,6 +29,8 @@ $this->registerJs($js);
 
 $state = ArrayHelper::map(LookupState::find()->where(['kawasan_perlaksanaan'=>'Ya'])->asArray()->all(), 'state_id', 'state');
 
+
+
 ?>
 
 <div class="gallery-info-form">
@@ -36,7 +39,15 @@ $state = ArrayHelper::map(LookupState::find()->where(['kawasan_perlaksanaan'=>'Y
 
     <?= $form->field($model, 'state_id')->dropDownList($state, ['prompt'=>'[Sila Pilih]']); ?>
 
-    <?= $form->field($model, 'program_id')->textInput() ?>
+
+    <?= $form->field($model, 'program_id')->dropDownList(
+        ArrayHelper::map(
+            KdsProgram::find()->all(),
+            function ($model) {
+                return $model->_id->{'$id'};
+            },
+            'nama_program'
+        ), ['prompt'=>'[Sila Pilih]']) ?>
 
     <?php DynamicFormWidget::begin([
         'widgetContainer' => 'dynamicform_wrapper', // required: only alphanumeric characters plus "_" [A-Za-z0-9_]

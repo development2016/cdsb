@@ -3,7 +3,8 @@
 namespace backend\modules\gallery\models;
 
 use Yii;
-
+use backend\models\KdsProgram;
+use common\models\LookupState;
 /**
  * This is the model class for table "gallery_info".
  *
@@ -31,8 +32,8 @@ class GalleryInfo extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['state_id', 'program_id', 'enter_by', 'update_by'], 'integer'],
-            [['date_enter', 'date_update'], 'string', 'max' => 50],
+            [['state_id', 'enter_by', 'update_by'], 'integer'],
+            [['date_enter', 'date_update','program_id'], 'string', 'max' => 50],
             ['state_id', 'required', 'message' => 'Sila Pilih Negeri'],
             ['program_id', 'required', 'message' => 'Sila Pilih Program'],
         ];
@@ -52,5 +53,14 @@ class GalleryInfo extends \yii\db\ActiveRecord
             'date_update' => 'Date Update',
             'update_by' => 'Update By',
         ];
+    }
+
+    public function getPrograms()
+    {
+        return $this->hasOne(KdsProgram::className(), ['_id' => 'program_id']);
+    }
+    public function getStates()
+    {
+        return $this->hasOne(LookupState::className(), ['state_id' => 'state_id']);
     }
 }
