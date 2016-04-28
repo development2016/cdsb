@@ -53,6 +53,8 @@ AppAsset::register($this);
                     'url' => ['#'],
                     'items' => [
                         ['label' => 'Program', 'url'=>['/kds-program']],
+                        ['label' => 'Aktiviti', 'url'=>['/kds-aktiviti']],
+                        ['label' => 'Organisasi', 'url'=>['/kds-organisasi']],
 
 
                     ]
