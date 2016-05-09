@@ -15,17 +15,14 @@
     "minimum-stability": "stable",
     "require": {
         "php": ">=5.4.0",
-        "yiisoft/yii2": ">=2.0.4",
+        "yiisoft/yii2": ">=2.0.6",
         "yiisoft/yii2-bootstrap": "*",
         "yiisoft/yii2-swiftmailer": "*",
-        "yiisoft/yii2-mongodb": "^2.0",
-        "yiisoft/yii2-jui": "^2.0",
         "2amigos/yii2-date-picker-widget": "~1.0",
         "2amigos/yii2-date-time-picker-widget": "~1.0",
-        "wbraganca/yii2-dynamicform": "dev-master",
-        "2amigos/yii2-file-upload-widget": "~1.0",
-        "kartik-v/yii2-widget-fileinput": "@dev",
-
+        "symfony/dom-crawler": "2.8",
+        "symfony/css-selector": "2.8",
+        "wbraganca/yii2-dynamicform": "2.0.1"
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",
@@ -41,5 +38,8 @@
             "npm-asset-library": "vendor/npm",
             "bower-asset-library": "vendor/bower"
         }
+    },
+    "scripts": {
+        "post-install-cmd": "php init --env=Development --overwrite=n"
     }
 }

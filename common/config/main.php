@@ -6,15 +6,4 @@ return [
             'class' => 'yii\caching\FileCache',
         ],
     ],
-    'modules' => [
-        // ...
-        'generator' => [
-            'class' => 'yii\gii\Module',
-            'generators' => [
-                'mongoDbModel' => [
-                    'class' => 'yii\mongodb\gii\model\Generator'
-                ]
-            ],
-        ],
-    ]
 ];
